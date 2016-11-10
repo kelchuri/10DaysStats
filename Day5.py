@@ -66,5 +66,42 @@ def normal2():
     print round(100 * (distSecond), 2)
     # print calNormal(val2, avg, deviation) - calNormal(val1,avg, deviation)
 
+def central1():
+    weight = int(raw_input())
+    number = int(raw_input())
+    avg = int(raw_input())
+    sd = int(raw_input())
 
-normal2()
+    new_avg = number * avg
+    new_sd = sqrt(number) * sd
+
+    print round(calNormal(weight, new_avg, new_sd), 4)
+
+def central2():
+    weight = int(raw_input())
+    number = int(raw_input())
+    avg = float(raw_input())
+    sd = float(raw_input())
+
+    new_avg = number * avg
+    new_sd = sqrt(number) * sd
+
+    print round(calNormal(weight, new_avg, new_sd), 4)
+
+def central3():
+    number = int(raw_input())
+    avg = int(raw_input())
+    sd = int(raw_input())
+    cover = float(raw_input())
+    z = float(raw_input())
+
+    new_avg = number * avg
+    new_sd = sqrt(number) * sd
+
+    print round((new_avg - new_sd * z)/number, 2)
+    print round((new_avg + new_sd * z) / number, 2)
+
+
+
+
+central3()
